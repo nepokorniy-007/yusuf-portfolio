@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yusuf | Personal Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #080b16;
+    color: white;
+}
+
+header {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: rgba(8,11,22,0.85);
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: #6c8cff;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #7594ff;
+}
+
+section {
+    padding: 110px 10%;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: radial-gradient(circle at 80% 40%, #18265b 0%, #080b16 55%);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h3 {
+    color: #829bff;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 75px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: #7894ff;
+}
+
+.hero p {
+    color: #aab1c7;
+    margin: 25px 0;
+    line-height: 1.9;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #6686ff;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #4567ed;
+    transform: translateY(-4px);
+}
+
+.hero-circle {
+    width: 300px;
+    height: 300px;
+    min-width: 220px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7894ff, #272f76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 110px;
+    box-shadow: 0 0 80px #4567ed55;
+    animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+    50% { transform: translateY(-18px); }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #7894ff;
+}
+
+.about-box {
+    background: #11182b;
+    padding: 35px;
+    border: 1px solid #263354;
+    border-radius: 20px;
+    line-height: 2;
+    color: #bbc4d9;
+    transition: .3s;
+}
+
+.about-box:hover {
+    border-color: #7894ff;
+    transform: translateY(-5px);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #11182b;
+    border: 1px solid #263354;
+    padding: 28px;
+    border-radius: 18px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #7894ff;
+    box-shadow: 0 10px 35px #4567ed22;
+}
+
+.card .icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #8da5ff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #aab1c7;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.teacher {
+    background: linear-gradient(135deg, #141e3a, #101528);
+    border: 1px solid #40549b;
+    border-radius: 25px;
+    padding: 45px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.teacher .icon {
+    font-size: 65px;
+}
+
+.teacher h2 {
+    font-size: 35px;
+    color: #8da5ff;
+    margin: 15px 0;
+}
+
+.teacher p {
+    color: #c2cbe0;
+    line-height: 2;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skills span {
+    background: #172448;
+    border: 1px solid #526cbd;
+    padding: 13px 25px;
+    border-radius: 30px;
+    color: #a9bcff;
+    transition: .3s;
+}
+
+.skills span:hover {
+    background: #6686ff;
+    color: white;
+}
+
+footer {
+    padding: 35px;
+    text-align: center;
+    background: #0e1424;
+    color: #8c96ad;
+}
+
+footer span {
+    color: #7894ff;
+}
+
+@media(max-width: 800px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav a {
+        margin-left: 9px;
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        padding-top: 140px;
+    }
+
+    .hero-circle {
+        width: 210px;
+        height: 210px;
+        font-size: 75px;
+    }
+
+    section {
+        padding: 90px 6%;
+    }
+
+    .teacher {
+        padding: 30px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">YUSUF.</div>
+    <nav>
+        <a href="#home">Bosh sahifa</a>
+        <a href="#about">Men haqimda</a>
+        <a href="#study">Ta'lim</a>
+        <a href="#teacher">Ustozim</a>
+    </nav>
+</header>
+
+<!-- BOSH SAHIFA -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <h3>Assalomu alaykum! 👋</h3>
+
+        <h1>Men <span>Yusuf</span>man.</h1>
+
+        <p>
+            Kelajak sari intilayotgan yosh dasturchi.
+            Men texnologiyalar, sun'iy intellekt va
+            zamonaviy web dasturlashga qiziqaman.
+            Maqsadim — katta natijalarga erishish!
+        </p>
+
+        <a href="#about" class="btn">Men haqimda ↓</a>
+    </div>
+
+    <div class="hero-circle">
+        👨🏻‍💻
+    </div>
+
+</section>
+
+<!-- MEN HAQIMDA -->
+<section id="about">
+
+    <h2 class="section-title">Men <span>haqimda</span></h2>
+
+    <div class="about-box">
+        Assalomu alaykum! Mening ismim Yusuf.
+        Men O'zbekistonning Namangan viloyati,
+        Chust tumanida yashayman.
+
+        <br><br>
+
+        Men zamonaviy texnologiyalar olamiga juda
+        qiziqaman. Hozirda dasturlashni o'rganib,
+        o'z bilimlarimni rivojlantirish ustida
+        ishlayapman.
+
+        <br><br>
+
+        Kelajakdagi maqsadim — kuchli dasturchi
+        bo'lish, o'z loyihalarimni yaratish va
+        texnologiyalar orqali katta yutuqlarga
+        erishish.
+    </div>
+
+    <div class="info-grid">
+
+        <div class="card">
+            <div class="icon">🎂</div>
+            <h3>Tug'ilgan kunim</h3>
+            <p>2-yanvar, 2010-yil</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📍</div>
+            <h3>Yashash joyim</h3>
+            <p>Namangan viloyati, Chust tumani</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>O'qish joyim</h3>
+            <p>Ziyocode o'quv markazi</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TA'LIM -->
+<section id="study">
+
+    <h2 class="section-title">Mening <span>qiziqishlarim</span></h2>
+
+    <div class="info-grid">
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Web dasturlash</h3>
+            <p>
+                HTML, CSS va JavaScript orqali
+                zamonaviy, chiroyli saytlar yaratish.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🤖</div>
+            <h3>Sun'iy intellekt</h3>
+            <p>
+                AI texnologiyalarini o'rganish
+                va ulardan yangi loyihalarda foydalanish.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚀</div>
+            <h3>Telegram botlar</h3>
+            <p>
+                Foydali va zamonaviy Telegram
+                botlar yaratish.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- USTOZIM -->
+<section id="teacher">
+
+    <h2 class="section-title">Mening eng yaxshi <span>ustozim</span></h2>
+
+    <div class="teacher">
+
+        <div class="icon">👨🏻‍🏫</div>
+
+        <h2>Atxam aka</h2>
+
+        <p>
+            Har bir muvaffaqiyat ortida bilim,
+            mehnat va yaxshi ustoz turadi.
+
+            <br><br>
+
+            Men uchun Atxam aka nafaqat ustoz,
+            balki bilim olish yo'lida motivatsiya
+            beradigan insonlardan biridir.
+
+            <br><br>
+
+            Ustozimga bergan bilimlari,
+            sabr-toqatlari va mehnatlari uchun
+            katta rahmat!
+
+            <br><br>
+
+            <strong>
+                "Yaxshi ustoz — buyuk kelajak sari
+                ochilgan eshikdir!"
+            </strong>
+        </p>
+
+    </div>
+
+</section>
+
+<!-- MAQSADLAR -->
+<section>
+
+    <h2 class="section-title">Mening <span>maqsadlarim</span></h2>
+
+    <div class="skills">
+        <span>🔥 Kuchli dasturchi bo'lish</span>
+        <span>💻 Professional saytlar yaratish</span>
+        <span>🤖 AI loyihalar yaratish</span>
+        <span>🚀 O'z biznesimni boshlash</span>
+        <span>🌍 Dunyo miqyosida tanilish</span>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 <span>YUSUF.</span> Barcha huquqlar himoyalangan.</p>
+    <p>Orzular katta bo'lsin, harakat undan ham katta! 🚀</p>
+</footer>
+
+</body>
+</html>
